@@ -615,6 +615,11 @@ for i in $(docker ps -a | grep "REGEXP_PATTERN" | cut -f1 -d" "); do echo $i; do
 ```
 docker run --rm ubuntu env
 ```
+Also
+
+```
+docker inspect <container id> | jq .[0].Config.Env
+```
 
 ### Kill running containers
 
